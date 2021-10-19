@@ -739,6 +739,11 @@ slider-item p {
 
 /* Pagination */
 
+.pagination {
+  grid-column: 2/-1;
+  margin-left: 140px;
+}
+
 .pagination-list {
   margin: 0;
   margin-bottom: 75px;
