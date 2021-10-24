@@ -22,7 +22,9 @@
           <li class="navigation-item current">Магазин</li>
           <li class="navigation-item"><a href="blank.html">Контакты</a></li>
         </ul>
-        <a class="cart" href="#">Корзина</a>
+        <nav class="user-navigation">
+          <a class="cart" href="#">Корзина</a>
+        </nav>
       </nav>
     </div>
   </header>
@@ -55,16 +57,18 @@
           <fieldset>
             <legend>Сетка:</legend>
             <p>
-              <input class="filter-option filter-radio" type="radio" name="grid" value="adaptive" id="adaptive-radio"
-                checked>
+              <input class="filter-option filter-radio" type="radio" name="grid" value="adaptive"
+                id="adaptive-radio" checked>
               <label for="adaptive-radio">Адаптивная</label>
             </p>
             <p>
-              <input class="filter-option filter-radio" type="radio" name="grid" value="fixed" id="fixed-radio">
+              <input class="filter-option filter-radio" type="radio" name="grid" value="fixed"
+                id="fixed-radio">
               <label for="fixed-radio">Фиксированная</label>
             </p>
             <p>
-              <input class="filter-option filter-radio" type="radio" name="grid" value="rubber" id="rubber-radio">
+              <input class="filter-option filter-radio" type="radio" name="grid" value="rubber"
+                id="rubber-radio">
               <label for="rubber-radio">Резиновая</label>
             </p>
           </fieldset>
@@ -72,13 +76,13 @@
           <fieldset>
             <legend>Особенности:</legend>
             <p>
-              <input class="filter-option filter-checkbox" type="checkbox" name="features" value="sllider"
-                id="slider-checkbox" checked>
+              <input class="filter-option filter-checkbox" type="checkbox" name="features"
+                value="sllider" id="slider-checkbox" checked>
               <label for="slider-checkbox">Слайдер</label>
             </p>
             <p>
-              <input class="filter-option filter-checkbox" type="checkbox" name="features" value="advantages"
-                id="advantages-checkbox">
+              <input class="filter-option filter-checkbox" type="checkbox" name="features"
+                value="advantages" id="advantages-checkbox">
               <label for="advantages-checkbox">Блок преимуществ</label>
             </p>
             <p>
@@ -87,8 +91,8 @@
               <label for="news-checkbox">Новости</label>
             </p>
             <p>
-              <input class="filter-option filter-checkbox" type="checkbox" name="features" value="gallery"
-                id="gallery-checkbox">
+              <input class="filter-option filter-checkbox" type="checkbox" name="features"
+                value="gallery" id="gallery-checkbox">
               <label for="gallery-checkbox">Галерея</label>
             </p>
             <p>
@@ -225,22 +229,23 @@
 
 
   <footer class="page-footer">
-    <section class="map">
+    <section class="contacts">
       <h2 class="visually-hidden">Карта</h2>
+      <div class="container">
+        <div class="contacts-address">
+          <h3>nërds design studio</h3>
+          <p>
+            наб. Реки Карповки,<br>
+            5 лит П, Санкт-Петербург
+          </p>
+          <p>
+            <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </p>
+          <button class="button contacts-button" type="button">Напишите нам</button>
+        </div>
+      </div>
+    </section>
 
-    </section>
-    <section class="contacts container">
-      <h2 class="visually-hidden">Контакты</h2>
-      <h3>nërds design studio</h3>
-      <p>
-        наб. Реки Карповки,<br>
-        5 лит П, Санкт-Петербург
-      </p>
-      <p>
-        <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-      </p>
-      <button class="button contacts-button" type="button">Напишите нам</button>
-    </section>
     <div class="container">
       <section class="social">
         <h2 class="visually-hidden">Соцсети</h2>
