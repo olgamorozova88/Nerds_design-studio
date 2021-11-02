@@ -238,15 +238,15 @@
       <form class="contact-us-form" action="#" method="POST">
         <p>
           <label class="contact-us-name" for="contact-us-name">Ваше имя:</label>
-          <input type="text" name="name" id="contact-us-name" placeholder="Имя Фамилия">
+          <input type="text" name="name" id="contact-us-name" placeholder="Имя Фамилия" pattern="^[A-Za-zА-Яа-яЁё\s]+$">
         </p>
         <p>
           <label class="contact-us-mail" for="contact-us-mail">Ваш e-mail:</label>
-          <input type="text" name="mail" id="contact-us-mail" placeholder="email@example.com">
+          <input type="email" name="mail" id="contact-us-mail" placeholder="email@example.com">
         </p>
         <p>
           <label class="contact-us-text" for="contact-us-text">Текст письма:</label>
-          <textarea name="text" id="contact-us-text">В свободной форме</textarea>
+          <textarea name="text" id="contact-us-text" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button modal-button" type="submit">Отправить</button>
       </form>

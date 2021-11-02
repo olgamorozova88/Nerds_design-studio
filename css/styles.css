@@ -185,15 +185,25 @@ ul {
 }
 
 .user-navigation {
+ display: flex;
+ flex-wrap: wrap;
  margin-top: 25px;
- max-width: 115px;
 }
 
 .cart {
+  position: relative;
   padding-left: 40px;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 15px;
+  height: 15px;
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  background-position: 0 50%;
 }
 
 .logo-inner {
@@ -381,7 +391,7 @@ ul {
 }
 
 .services-button {
-  max-width: 160px;
+  min-width: 160px;
   padding: 17px 40px 15px 40px;
 }
 
@@ -489,6 +499,7 @@ ul {
 .filter-button {
   max-width: 260px;
   padding: 17px 89px 15px 88px;
+  margin-bottom: 15px
 }
 
 .price-button {
@@ -541,7 +552,6 @@ ul {
 }
 
 .modal-button {
-  margin-top: 13px;
   padding: 17px 83px 15px 83px;
 }
 
@@ -551,6 +561,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   column-gap: 100px;
+  row-gap: 50px;
   padding: 0;
   margin: 0;
   margin-bottom: 80px;
@@ -600,6 +611,7 @@ ul {
 .index-columns {
   display: grid;
   grid-template-columns: 1fr 360px;
+  column-gap: 100px;
   padding: 0;
   padding-bottom: 73px;
   margin: 0;
@@ -876,13 +888,14 @@ ul {
 
 .filter-radio {
   display: flex;
-  align-items: center;
   column-gap: 11px;
+  align-items: center;
   cursor: pointer;
 }
 
 .filter-radio::before {
   display: block;
+  flex-shrink: 0;
   content: " ";
   width: 25px;
   height: 25px;
@@ -930,6 +943,7 @@ input:disabled + .filter-radio {
   display: block;
   content: " ";
   width: 25px;
+  flex-shrink: 0;
   height: 25px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -1066,6 +1080,7 @@ input:disabled + .filter-checkbox {
   border-radius: 0px 0px 5px 5px;
   border: 1px solid var(--browser-grey);
   border-top: none;
+  object-fit: contain;
 }
 
 .catalog-item:hover .item-picture::before {
@@ -1189,6 +1204,7 @@ input:disabled + .filter-checkbox {
   display: flex;
   align-items: center;
   margin: 0;
+  margin-bottom: 68px;
   padding: 0;
 }
 
@@ -1200,7 +1216,6 @@ input:disabled + .filter-checkbox {
   margin-right: 139px;
   padding: 0;
 }
-
 
 .social-header {
   margin: 0;
@@ -1220,9 +1235,20 @@ input:disabled + .filter-checkbox {
 
 /* Modal */
 
+.modal {
+  /* display: none; */
+  position: fixed;
+  width: 960px;
+  height: 590px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 180px;
+}
+
 .modal-content {
   position: relative;
-  max-width: 761px;
+  width: 761px;
   min-height: 443px;
   padding: 63px 99px 84px 100px;
   background-color: var(--basic-white);
@@ -1234,7 +1260,7 @@ input:disabled + .filter-checkbox {
   margin-bottom: 37px;
   padding: 0;
   font-size: 45px;
-  line-height: 53px;
+  line-height: 52px;
   font-weight: 700;
 }
 
@@ -1249,23 +1275,33 @@ input:disabled + .filter-checkbox {
   margin-bottom: 34px;
 }
 
+.contact-us-form p:nth-child(3) {
+  margin: 0;
+  margin-bottom: 41px;
+}
+
 .contact-us-form label {
   display: block;
   margin-bottom: 9px;
   font-weight: 700;
+  line-height: 18px;
 }
 
 .contact-us-form input {
   width: 360px;
+  height: 50px;
   display: block;
   padding: 16px;
+  line-height: 18px;
   box-sizing: border-box;
 }
 
 .contact-us-form textarea {
   width: 760px;
-  min-height: 118px;
+  height: 118px;
   padding: 16px;
+  line-height: 18px;
+  overflow: auto;
   box-sizing: border-box;
 }
 
@@ -1275,18 +1311,28 @@ input:disabled + .filter-checkbox {
   color: var(--special-black);
   border-radius: 3px;
   border: 2px solid var(--input-static);
+  background-color: transparent;
 }
 
 .contact-us-form input:hover,
 .contact-us-form textarea:hover {
   border-color: var(--input-hover);
+  outline: none;
 }
 
 .contact-us-form input:focus,
 .contact-us-form textarea:focus {
   border-color: var(--accent-black);
+  outline: none;
+}
+
+.contact-us-form input:focus::-webkit-input-placeholder,
+.contact-us-form textarea:focus::-webkit-input-placeholder {
+  color: var(--special-black);
 }
 
 .contact-us-form input:invalid {
   border-color: var(--basic-red);
+  color: var(--basic-red);
+  outline: none;
 }
