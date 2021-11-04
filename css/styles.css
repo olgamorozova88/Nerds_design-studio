@@ -1326,8 +1326,8 @@ input:disabled + .filter-checkbox {
   outline: none;
 }
 
-.contact-us-form input:focus::-webkit-input-placeholder,
-.contact-us-form textarea:focus::-webkit-input-placeholder {
+.contact-us-form input:focus::placeholder,
+.contact-us-form textarea:focus::placeholder {
   color: var(--special-black);
 }
 
