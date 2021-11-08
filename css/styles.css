@@ -358,6 +358,7 @@ ul {
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .slider-button,
@@ -391,8 +392,9 @@ ul {
 }
 
 .services-button {
-  min-width: 160px;
+  width: 160px;
   padding: 17px 40px 15px 40px;
+  box-sizing: border-box;
 }
 
 .apps-button {
@@ -1001,21 +1003,25 @@ input:disabled + .filter-checkbox {
 }
 
 .direction-down {
+  display: block;
   width: 10px;
   height: 11px;
   margin-right: 18px;
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .direction-up {
+  display: block;
   width: 10px;
   height: 11px;
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .sort-item a {
@@ -1083,16 +1089,19 @@ input:disabled + .filter-checkbox {
   object-fit: contain;
 }
 
-.catalog-item:hover .item-picture::before {
+.catalog-item:hover .item-picture::before,
+.catalog-item:focus .item-picture::before {
   opacity: 1;
 }
 
-.catalog-item:hover .item-picture img {
+.catalog-item:hover .item-picture img,
+.catalog-item:focus .item-picture img {
   border: none;
   box-shadow: 0 6px 15px 0 var(--drop-shadow);
 }
 
-.catalog-item:hover .catalog-item-description {
+ .catalog-item:hover .catalog-item-description,
+ .catalog-item:focus-within .catalog-item-description {
   display: block;
 }
 
@@ -1158,12 +1167,13 @@ input:disabled + .filter-checkbox {
 
 .contacts {
   box-sizing: border-box;
+  width: 100%;
   height: 416px;
   padding: 54px 0;
   margin-bottom: 68px;
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
-  background-size: 1440px 416px;
+  background-size: 100% auto;
   background-position: top center;
 }
 
@@ -1236,7 +1246,7 @@ input:disabled + .filter-checkbox {
 /* Modal */
 
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   width: 960px;
   height: 590px;
