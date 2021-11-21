@@ -11,3 +11,10 @@ modalHide.addEventListener('click', function () {
   modal.classList.remove('modal-show');
   modal.classList.add('modal-hide');
 });
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    modal.classList.remove('modal-show');
+    modal.classList.add('modal-hide');
+  }
+})
