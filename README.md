@@ -1,7 +1,3 @@
-# Nerds_design-studio
-Personal project under HTML-Acadymy course (1st module)
-
-
 Техническое задание
 1. Общие технические требования
 
