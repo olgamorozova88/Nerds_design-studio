@@ -1,3 +1,5 @@
+https://olgamorozova88.github.io/Nerds_design-studio/
+
 Техническое задание
 
 1. Общие технические требования
