@@ -558,6 +558,10 @@ ul {
   padding: 17px 72px 15px 72px;
 }
 
+.social-item:not(:first-child) {
+  display: none;
+}
+
 .social-item a {
   display: -webkit-box;
   display: -ms-flexbox;

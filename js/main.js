@@ -22,9 +22,11 @@ modalHide.addEventListener('click', function () {
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    modal.classList.remove('modal-show');
-    modal.classList.add('modal-hide');
-    modal.classList.remove("modal-error")
+    if (modal.classList.contains('modal-show')) {
+      evt.preventDefault();
+      modal.classList.remove('modal-show');
+      modal.classList.remove("modal-error");
+    }
   }
 });
 
